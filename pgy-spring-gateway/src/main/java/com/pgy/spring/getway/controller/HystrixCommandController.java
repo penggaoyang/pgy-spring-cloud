@@ -1,4 +1,4 @@
-package com.pgy.controller;
+package com.pgy.spring.getway.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

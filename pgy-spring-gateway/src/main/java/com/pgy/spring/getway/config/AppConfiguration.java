@@ -1,4 +1,4 @@
-package com.pgy.config;
+package com.pgy.spring.getway.config;
 
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;

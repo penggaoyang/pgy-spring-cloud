@@ -1,4 +1,4 @@
-package com.pgy.filter;
+package com.pgy.spring.getway.filter;
 
 
 import org.springframework.cloud.gateway.filter.GatewayFilter;

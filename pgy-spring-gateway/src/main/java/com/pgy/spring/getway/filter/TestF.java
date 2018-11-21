@@ -1,4 +1,4 @@
-package com.pgy.filter;
+package com.pgy.spring.getway.filter;
 
 public interface TestF {
 	
