@@ -2,36 +2,26 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: host_route2
-        uri: http://www.xbniao.com
-        predicates:   
-        - Path=/foo/**
-      - id: host_route3
-        uri: http://www.xbniao.com:80
-        predicates:   
-        - Path=/foo2/**
-      - id: i5xforyou-biz-auth
-        uri: lb://i5xforyou-biz-auth
+      - id: user
+        uri: lb://PGYUSER
         predicates:
-        - Path=/auth/**
-        filters:
-        - StripPrefix= 1
-        - name: Hystrix
-          args:
-            name: authHystrixCommand
-            fallbackUri: forward:/hystrixTimeout
-
+        - Path=/user/**
+      - id: PGY-SPRING-CLOUD-USER
+        uri: lb://PGYUSER
+        predicates:
+        - Path=/actuator/info/**
+  application:
+    name: pgygateway
 
 eureka:
   instance:
     prefer-ip-address: true
-    status-page-url-path: /actuator/info
-    health-check-url-path: /actuator/health
   client:
-    register-with-eureka: true
-    fetch-registry: false
+    healthcheck.enabled: true
+    registerWithEureka: true
+    enabled: true
     service-url:
-      defaultZone: http://localhost:50000/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 server:
   port: 80

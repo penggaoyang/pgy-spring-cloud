@@ -37,7 +37,7 @@ public class MyGatewayFilterFactory extends AbstractGatewayFilterFactory<MyGatew
 	}
 	
 	public static class Config {
-        //Put the configuration properties for your filter here
+		
 	}
 
 	
